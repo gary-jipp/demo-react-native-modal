@@ -7,7 +7,7 @@ const App = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <View style={styles.centeredView}>
+    <View style={styles.modalView}>
       <MyModal visible={visible} setVisible={setVisible} />
       <Button
         title="Hello Modal"
@@ -19,7 +19,7 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  centeredView: {
+  modalView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
