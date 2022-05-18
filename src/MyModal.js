@@ -15,10 +15,14 @@ const MyModal = function (props) {
       }}>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <Text style={styles.modalText}>Hello Modal!</Text>
-          <Text style={styles.inputText}>{input}</Text>
-          <View>
-            <TextInput style={styles.input} onChangeText={setInput} />
+          <Text style={styles.modalText}>Hello React Native</Text>
+          <Text style={styles.userText}>{input}</Text>
+          <View style={styles.inputContainer}>
+            <TextInput
+              style={styles.input}
+              onChangeText={setInput}
+              value={input}
+            />
           </View>
           <Pressable
             style={[styles.button, styles.buttonClose]}
@@ -27,7 +31,7 @@ const MyModal = function (props) {
           </Pressable>
         </View>
       </View>
-    </Modal >
+    </Modal>
   );
 };
 
@@ -70,18 +74,22 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
   },
-  inputText: {
-    marginTop: 15,
+  userText: {
+    width: '100%',
+    padding: 10,
     fontSize: 25,
     textAlign: 'center',
   },
   input: {
-    height: 50,
-    width: 200,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
     fontSize: 24,
+  },
+  inputContainer: {
+    borderColor: 'gray',
+    width: '100%',
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 8,
+    marginBottom: 10,
   },
 });
 
