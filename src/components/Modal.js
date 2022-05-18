@@ -1,6 +1,5 @@
 import React from 'react';
 import {Modal as RNModal, StyleSheet, View} from 'react-native';
-import Button from 'components/Button';
 
 const Modal = function (props) {
   return (
@@ -10,10 +9,7 @@ const Modal = function (props) {
       visible={props.visible}
       onRequestClose={props.onRequestClose}>
       <View style={styles.centeredView}>
-        <View style={styles.modalView}>
-          {props.children}
-          <Button title="OK" onPress={props.onRequestClose} />
-        </View>
+        <View style={styles.modalView}>{props.children}</View>
       </View>
     </RNModal>
   );

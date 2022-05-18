@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {View, TextInput} from 'react-native';
 import Modal from 'components/Modal';
+import Button from 'components/Button';
 
 const MyModal = function (props) {
   const [input, setInput] = useState('');
@@ -24,6 +25,7 @@ const MyModal = function (props) {
           value={input}
         />
       </View>
+      <Button title="OK" onPress={close} />
     </Modal>
   );
 };
