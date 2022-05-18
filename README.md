@@ -1,3 +1,4 @@
 # React Native Modal
 
-- State survives
+- Transparent modal. Cant see but blocks App
+- Can't style it. Need a View

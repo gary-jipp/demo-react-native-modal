@@ -27,13 +27,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#2196F0',
-  },
-  textStyle: {
-    fontSize: 20,
-    color: 'white',
-    fontWeight: 'bold',
-    paddingHorizontal: 12,
-  },
+  }
 });
 
 export default App;
