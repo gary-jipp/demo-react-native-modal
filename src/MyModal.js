@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Modal, StyleSheet, Text, Pressable} from 'react-native';
 import {View, TextInput} from 'react-native';
-import Button from 'Button';
+import Button from 'components/Button';
 
 const MyModal = function (props) {
   const [input, setInput] = useState('');
