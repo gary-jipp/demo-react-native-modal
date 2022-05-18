@@ -5,8 +5,8 @@ const Modal = function (props) {
   return (
     <RNModal
       animationType={props.slide || 'slide'}
-      transparent={props.transparent || true}
-      visible={props.visible}
+      transparent={true}
+      visible={props.visible || false}
       onRequestClose={props.onRequestClose}>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>{props.children}</View>
