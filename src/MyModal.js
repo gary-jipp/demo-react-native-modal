@@ -10,11 +10,7 @@ const MyModal = function (props) {
   const close = () => props.setVisible(!props.visible);
 
   return (
-    <Modal
-      animationType="slide"
-      transparent={true}
-      visible={props.visible}
-      onRequestClose={close}>
+    <Modal visible={props.visible} onRequestClose={close}>
       <Text style={styles.titleText}>Hello React Native</Text>
       <Text style={styles.userText}>{input}</Text>
       <View style={styles.inputContainer}>
