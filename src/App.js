@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, Pressable, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import Button from 'Button';
 import MyModal from 'MyModal';
 
 const App = () => {
@@ -8,9 +9,11 @@ const App = () => {
   return (
     <View style={styles.centeredView}>
       <MyModal visible={visible} setVisible={setVisible} />
-      <Pressable style={styles.button} onPress={() => setVisible(true)}>
-        <Text style={styles.textStyle}>Hello Modal</Text>
-      </Pressable>
+      <Button
+        title="Hello Modal"
+        style={styles.button}
+        onPress={() => setVisible(true)}
+      />
     </View>
   );
 };
@@ -23,9 +26,6 @@ const styles = StyleSheet.create({
     marginTop: 22,
   },
   button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
     backgroundColor: '#2196F0',
   },
   textStyle: {

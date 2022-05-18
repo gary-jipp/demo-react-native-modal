@@ -1,9 +1,14 @@
 import React, {useState} from 'react';
 import {Modal, StyleSheet, Text, Pressable} from 'react-native';
 import {View, TextInput} from 'react-native';
+import Button from 'Button';
 
 const MyModal = function (props) {
   const [input, setInput] = useState('');
+
+  const pressable = function ({pressed}) {
+    return {opacity: pressed ? 0.8 : 1.0};
+  };
 
   return (
     <Modal
@@ -19,16 +24,13 @@ const MyModal = function (props) {
           <Text style={styles.userText}>{input}</Text>
           <View style={styles.inputContainer}>
             <TextInput
+              placeholder="Type something"
               style={styles.input}
               onChangeText={setInput}
               value={input}
             />
           </View>
-          <Pressable
-            style={[styles.button, styles.buttonClose]}
-            onPress={() => props.setVisible(!props.visible)}>
-            <Text style={styles.textStyle}>OK</Text>
-          </Pressable>
+          <Button title="OK" onPress={() => props.setVisible(!props.visible)} />
         </View>
       </View>
     </Modal>
@@ -36,6 +38,11 @@ const MyModal = function (props) {
 };
 
 const styles = StyleSheet.create({
+  pressable: function ({pressed}) {
+    return {
+      opacity: pressed ? 0.8 : 1.0,
+    };
+  },
   centeredView: {
     flex: 1,
     justifyContent: 'center',
@@ -54,14 +61,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonClose: {
-    backgroundColor: '#2196F0',
   },
   textStyle: {
     color: 'white',
