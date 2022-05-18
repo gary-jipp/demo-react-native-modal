@@ -1,3 +1,6 @@
 # React Native Modal
 
-- State survives
+### Modal View
+- can style
+- still transparent
+- add border to show
