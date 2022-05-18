@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {Modal, StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {View, TextInput} from 'react-native';
-import Button from 'components/Button';
+import Modal from 'components/Modal';
 
 const MyModal = function (props) {
   const [input, setInput] = useState('');
@@ -14,58 +14,22 @@ const MyModal = function (props) {
       transparent={true}
       visible={props.visible}
       onRequestClose={close}>
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>
-          <Text style={styles.modalText}>Hello React Native</Text>
-          <Text style={styles.userText}>{input}</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              placeholder="Type something"
-              style={styles.input}
-              onChangeText={setInput}
-              value={input}
-            />
-          </View>
-          <Button title="OK" onPress={close} />
-        </View>
+      <Text style={styles.titleText}>Hello React Native</Text>
+      <Text style={styles.userText}>{input}</Text>
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Type something"
+          style={styles.input}
+          onChangeText={setInput}
+          value={input}
+        />
       </View>
     </Modal>
   );
 };
 
 const styles = StyleSheet.create({
-  pressable: function ({pressed}) {
-    return {
-      opacity: pressed ? 0.8 : 1.0,
-    };
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    // borderColor: 'red',
-    // borderWidth: 2,
-  },
-  modalView: {
-    width: '95%',
-    height: '95%',
-    margin: 20,
-    backgroundColor: 'white',
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    borderRadius: 10,
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 20,
-    paddingHorizontal: 12,
-  },
-  modalText: {
+  titleText: {
     marginBottom: 15,
     fontSize: 25,
     textAlign: 'center',
