@@ -1,33 +1,23 @@
-import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
-import Button from 'components/Button';
-import MyModal from 'MyModal';
+import React from 'react';
+import {SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
 
 const App = () => {
-  const [visible, setVisible] = useState(false);
 
   return (
-    <View style={styles.modalView}>
-      <MyModal visible={visible} setVisible={setVisible} />
-      <Button
-        title="Hello Modal"
-        style={styles.button}
-        onPress={() => setVisible(true)}
-      />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <StatusBar />
+      <Text style={styles.text}>Hello React</Text>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  modalView: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 22,
   },
-  button: {
-    backgroundColor: '#2196F0',
-  },
+  text: {fontSize: 24, fontWeight: '500'},
 });
 
 export default App;
