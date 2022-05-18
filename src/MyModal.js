@@ -6,10 +6,6 @@ import Button from 'components/Button';
 const MyModal = function (props) {
   const [input, setInput] = useState('');
 
-  const pressable = function ({pressed}) {
-    return {opacity: pressed ? 0.8 : 1.0};
-  };
-
   return (
     <Modal
       animationType="slide"
@@ -47,7 +43,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 22,
+    // borderColor: 'red',
+    // borderWidth: 2,
   },
   modalView: {
     width: '95%',
