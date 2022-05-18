@@ -1,3 +1,3 @@
 # React Native Modal
 
-- State survives
+- TextInput Component
