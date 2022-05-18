@@ -11,18 +11,13 @@ const MyModal = function (props) {
       transparent={true}
       visible={props.visible}
       onRequestClose={close}>
-      <View style={styles.centeredView} />
+      <View style={styles.modalView} />
     </Modal>
   );
 };
 
 const styles = StyleSheet.create({
-  pressable: function ({pressed}) {
-    return {
-      opacity: pressed ? 0.8 : 1.0,
-    };
-  },
-  centeredView: {
+  modalView: {
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: 'red',
