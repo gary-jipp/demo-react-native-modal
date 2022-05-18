@@ -7,7 +7,7 @@ const MyModal = function (props) {
   return (
     <Modal
       animationType="slide"
-      transparent={true}
+      transparent={false}
       visible={props.visible}
       onRequestClose={close}
     />
