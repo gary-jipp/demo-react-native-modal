@@ -8,22 +8,22 @@ const Modal = function (props) {
       transparent={true}
       visible={props.visible || false}
       onRequestClose={props.onRequestClose}>
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>{props.children}</View>
+      <View style={styles.modalView}>
+        <View style={styles.cardView}>{props.children}</View>
       </View>
     </RNModal>
   );
 };
 
 const styles = StyleSheet.create({
-  centeredView: {
+  modalView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     // borderColor: 'red',
     // borderWidth: 2,
   },
-  modalView: {
+  cardView: {
     width: '95%',
     height: '95%',
     margin: 20,
