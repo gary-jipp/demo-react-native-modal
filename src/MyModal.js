@@ -1,7 +1,10 @@
-import React from 'react';
-import {Modal, StyleSheet, Text, Pressable, View} from 'react-native';
+import React, {useState} from 'react';
+import {Modal, StyleSheet, Text, Pressable} from 'react-native';
+import {View, TextInput} from 'react-native';
 
 const MyModal = function (props) {
+  const [input, setInput] = useState('');
+
   return (
     <Modal
       animationType="slide"
@@ -12,7 +15,11 @@ const MyModal = function (props) {
       }}>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <Text style={styles.modalText}>Hello World!</Text>
+          <Text style={styles.modalText}>Hello Modal!</Text>
+          <Text style={styles.inputText}>{input}</Text>
+          <View>
+            <TextInput style={styles.input} onChangeText={setInput} />
+          </View>
           <Pressable
             style={[styles.button, styles.buttonClose]}
             onPress={() => props.setVisible(!props.visible)}>
@@ -20,7 +27,7 @@ const MyModal = function (props) {
           </Pressable>
         </View>
       </View>
-    </Modal>
+    </Modal >
   );
 };
 
@@ -62,6 +69,19 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontSize: 25,
     textAlign: 'center',
+  },
+  inputText: {
+    marginTop: 15,
+    fontSize: 25,
+    textAlign: 'center',
+  },
+  input: {
+    height: 50,
+    width: 200,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    fontSize: 24,
   },
 });
 

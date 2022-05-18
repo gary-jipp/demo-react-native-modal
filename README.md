@@ -1,1 +1,3 @@
-# React Native Navigation 
+# React Native Modal
+
+- State survives
