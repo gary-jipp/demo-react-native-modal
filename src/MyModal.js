@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Modal, StyleSheet, Text, Pressable} from 'react-native';
+import {Modal, StyleSheet, Text} from 'react-native';
 import {View, TextInput} from 'react-native';
 import Button from 'components/Button';
 
