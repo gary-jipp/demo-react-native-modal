@@ -6,14 +6,14 @@ import Button from 'components/Button';
 const MyModal = function (props) {
   const [input, setInput] = useState('');
 
+  const close = () => props.setVisible(!props.visible);
+
   return (
     <Modal
       animationType="slide"
       transparent={true}
       visible={props.visible}
-      onRequestClose={() => {
-        props.setVisible(!props.visible);
-      }}>
+      onRequestClose={close}>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
           <Text style={styles.modalText}>Hello React Native</Text>
@@ -26,7 +26,7 @@ const MyModal = function (props) {
               value={input}
             />
           </View>
-          <Button title="OK" onPress={() => props.setVisible(!props.visible)} />
+          <Button title="OK" onPress={close} />
         </View>
       </View>
     </Modal>
