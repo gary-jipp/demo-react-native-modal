@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#2196F0',
-  }
+  },
 });
 
 export default App;
