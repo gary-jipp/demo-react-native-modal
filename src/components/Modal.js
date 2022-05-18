@@ -6,7 +6,7 @@ const Modal = function (props) {
     <RNModal
       animationType={props.slide || 'slide'}
       transparent={true}
-      visible={props.visible || false}
+      visible={props.visible}
       onRequestClose={props.onRequestClose}>
       <View style={styles.modalView}>
         <View style={styles.cardView}>{props.children}</View>
