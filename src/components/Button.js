@@ -13,7 +13,6 @@ const Button = props => {
 
 const styles = StyleSheet.create({
   pressable: function ({pressed}) {
-    console.log('pressed=', pressed);
     return {opacity: pressed ? 0.8 : 1.0};
   },
   button: {
